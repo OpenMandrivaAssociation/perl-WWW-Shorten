@@ -1,5 +1,5 @@
 %define upstream_name    WWW-Shorten
-%define upstream_version 3.00
+%define upstream_version 3.02
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -51,6 +51,6 @@ rm -rf %buildroot
 %doc README META.yml Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-/usr/bin/shorten
-/usr/share/man/man1/shorten.1.lzma
+%{_bindir}/shorten
+%{_mandir}/man1/shorten.1*
 
