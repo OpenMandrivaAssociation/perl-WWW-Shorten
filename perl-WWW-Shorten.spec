@@ -1,15 +1,16 @@
 %define upstream_name    WWW-Shorten
-%define upstream_version 3.04
+%define upstream_version 3.05
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Perl interface to makeashorterlink.com
+
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/WWW-Shorten-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Config::Auto)
@@ -50,5 +51,6 @@ make test TEST_FILES="t/0*.t t/9*.t"
 %{perl_vendorlib}/*
 %{_bindir}/shorten
 %{_mandir}/man1/shorten.1*
+
 
 
